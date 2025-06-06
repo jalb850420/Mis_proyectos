@@ -13,7 +13,7 @@
   </header>
 
   <div class="contenido-principal">
-    <aside class="menu-lateral">
+    <aside id="menu-lateral" class="menu-lateral">
       <h2>Proyectos</h2>
       <ul>
         <li><button onclick="cargarProyecto('ejercicios/Adivinar_num/index.html')">Adivinar número</button></li>
@@ -31,11 +31,31 @@
       <iframe id="visor" src="" frameborder="0"></iframe>
     </section>
   </div>
-
+  <footer>
+    <button id="esc_aper" class="button_footer" title="Esconder menú" onclick="esconder_aparecer()"><</button>
+  </footer>
   <script>
+    
     function cargarProyecto(ruta) {
       document.getElementById('visor').src = ruta;
     }
+ 
+    let menuAbierto = true;
+    document.getElementById("esc_aper").addEventListener("click", () => {
+      const menu = document.getElementById("menu-lateral");
+
+      if (menuAbierto) {
+        menu.style.width = "0px";
+        document.getElementById("esc_aper").innerText = ">";
+        document.getElementById("esc_aper").title="Desplegar menu"
+      } else {
+        menu.style.width = "250px";
+        document.getElementById("esc_aper").innerText = "<";
+        document.getElementById("esc_aper").title="Esconder menu"
+      }
+
+      menuAbierto = !menuAbierto;
+    });
   </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
-/* 
-* {
+ 
+/* * {
     border: 1px solid red;
-} */
+}  */
 
 body {
   margin: 0;
@@ -49,7 +49,7 @@ body {
   background-size: contain; /* La imagen se ajusta dentro de la tabla sin recortarse */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
-  color: white;
+  color: #FBA90B;
   padding: 10px; 
   border-radius: 8px;
   width: 230px; /* Establece un tamaño fijo más pequeño para la tabla */
@@ -71,7 +71,8 @@ table {
 th, td {
   
   /* border: 1px solid #fff; Color del borde de la tabla */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Da contraste al texto */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Da contraste al texto */
+  
 }
 
 th {
@@ -79,13 +80,31 @@ th {
   vertical-align: bottom;
   height: 35px;
   font-size: 12px;
+  text-shadow:  
+      -1px -1px 0 #000,  
+        1px -1px 0 #000,
+      -1px  1px 0 #000,
+        2px  2px 0 #000;
 }
 
 td {
   vertical-align: top;
   font-size: 40px;
-}
+  text-shadow:  
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
 
+}
+section {
+      padding: 40px;      
+      flex: 1;
+      display: flex;
+      justify-content: center;  /* centra horizontalmente */
+      align-items: center;      /* centra verticalmente */
+      /* background-color: #f4f4f4; */
+}
 /* Estilo para las imágenes */
 .imagenes {
   display: flex;
@@ -103,8 +122,8 @@ td {
 }
 
 .img_img3 {
-    width: 180px;
-    height: 140px;
+    width: 160px;
+    height: 120px;
 }
 
 footer{
