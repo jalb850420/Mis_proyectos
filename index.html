@@ -38,24 +38,28 @@
     
     function cargarProyecto(ruta) {
       document.getElementById('visor').src = ruta;
+      if (menuAbierto) {
+        esconder_aparecer();
+      }
     }
  
     let menuAbierto = true;
-    document.getElementById("esc_aper").addEventListener("click", () => {
+    function esconder_aparecer() {
       const menu = document.getElementById("menu-lateral");
+      const boton = document.getElementById("esc_aper");
 
       if (menuAbierto) {
         menu.style.width = "0px";
-        document.getElementById("esc_aper").innerText = ">";
-        document.getElementById("esc_aper").title="Desplegar menu"
+        boton.innerText = ">";
+        boton.title = "Desplegar menú";
       } else {
         menu.style.width = "250px";
-        document.getElementById("esc_aper").innerText = "<";
-        document.getElementById("esc_aper").title="Esconder menu"
+        boton.innerText = "<";
+        boton.title = "Esconder menú";
       }
 
       menuAbierto = !menuAbierto;
-    });
+    }
   </script>
 </body>
 </html>
