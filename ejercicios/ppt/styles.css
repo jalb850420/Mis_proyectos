@@ -1,0 +1,119 @@
+
+header{
+    display: block;
+
+}
+
+h1{
+    text-align: left;
+}
+h2{
+    text-align: center;
+}
+.fondo-juego {
+    background-color: aquamarine;
+    background-image: url(img/fondo_PPoT.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: #fff; /* o algún color que combine con tu imagen */
+    height: 97vh;
+    width: 90vw;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
+/* * {
+    border:1px solid red;
+} */
+
+.contenedor{
+    position: absolute;
+    right: 270px;
+    top: 55px;
+}
+
+
+.div_score{
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* right: -290px;
+    top: -250px; */
+}
+
+.div_score article {
+    height: 25px;
+}
+.div_players {
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.div_button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.div_button button{
+    width: 10%;
+    border-radius: 40px;
+    transform: translate(50%, -800%) 
+}
+
+.imagen-container {
+    margin-top: 20px;
+}
+
+.imagen-ajustada{
+    width: 100px; 
+    height: auto; 
+    display: block;
+}
+.div-diferente{
+    display: flex;
+    justify-content: space-around;
+}
+.imagen-ajustada-result{
+    /* display: flex;
+    justify-content: space-between; */
+    width: 70px; 
+    height: 70px; 
+}
+.imagen-ajustada-empate{
+    display: flex;
+    justify-content: center;
+    width: 150px; 
+    height: 70px;
+}
+.div-imagen-ajustada-empate{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+ }
+
+.tabla {
+    position: absolute;
+    right: 570px;
+    top: 330px;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: right;
+}

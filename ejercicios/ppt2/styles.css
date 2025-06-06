@@ -1,0 +1,108 @@
+
+* {
+    border: 1px solid red;
+}
+
+.fondo-juego {
+    background-color: aquamarine;
+    background-image: url(img/FondoNew.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: #fff; /* o algún color que combine con tu imagen */
+    height: 97vh;
+    width: 90vw;
+}
+
+.div_header{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.contenedor-juego {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: auto 1fr; /* Fila superior para la tabla y fila inferior para las imágenes */
+  height: 100vh;
+  justify-items: center; /* Centra contenido horizontalmente */
+  align-items: center; /* Centra contenido verticalmente */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.tabla-score {
+  position: absolute; /* Posiciona la tabla en la parte superior derecha */
+  top: 20px; /* 20px desde la parte superior */
+  right: 20px; /* 20px desde la parte derecha */
+  background-image: url('img/score.png'); /* Imagen de fondo */
+  background-size: contain; /* La imagen se ajusta dentro de la tabla sin recortarse */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px; /* Establece un tamaño fijo más pequeño para la tabla */
+  height: 150px; /* Establece una altura fija para la tabla */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  text-align: center;
+  overflow: hidden; /* Asegura que si la imagen es más grande que el contenedor, no se desborde */
+  z-index: 10; /* Asegura que la tabla esté encima de otros elementos */
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  z-index: 1; /* Asegura que la tabla esté encima de la imagen de fondo */
+}
+
+th, td {
+  padding: 10px;
+  /* border: 1px solid #fff; Color del borde de la tabla */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Da contraste al texto */
+}
+
+th {
+  font-size: 20px;
+}
+
+td {
+  font-size: 18px;
+}
+
+/* Estilo para las imágenes */
+.img_img1 {
+    width: 200px;
+    height: 70px;
+}
+
+.img_img2 {
+    width: 120px;
+    height: 100px;
+}
+
+/* Diseño responsivo para dispositivos pequeños */
+@media (max-width: 768px) {
+  /* .contenedor-juego {
+    grid-template-columns: 1fr; /* En dispositivos más pequeños, todo se muestra en una sola columna */
+    grid-template-rows: auto auto;
+  } */
+
+  .imagenes {
+    grid-template-columns: 1fr; /* Imágenes en una sola columna */
+  }
+
+  .tabla-score {
+    padding: 0.5rem;
+    font-size: 14px; /* Reducir el tamaño del texto en la tabla en pantallas pequeñas */
+  }
+
+  table {
+    font-size: 14px; /* Reducir el tamaño de la tabla */
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}

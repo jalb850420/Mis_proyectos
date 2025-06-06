@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Proyectos - Diplomado Web</title>
+  <!-- Enlace al archivo externo de CSS -->
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>Mis Proyectos del Diplomado</h1>
+  </header>
+
+  <div class="contenido-principal">
+    <aside class="menu-lateral">
+      <h2>Proyectos</h2>
+      <ul>
+        <li><button onclick="cargarProyecto('ejercicios/Adivinar_num/index.html')">Adivinar número</button></li>
+        <li><button onclick="cargarProyecto('ejercicios/Conteo_de_vocales/index.html')">Conteo_de_vocales</button></li>
+        <li><button onclick="cargarProyecto('ejercicios/Factorial/index.html')">Factorial</button></li>
+        <li><button onclick="cargarProyecto('ejercicios/FizzBuzz/index.html')">FizzBuzz</button></li>
+        <li><button onclick="cargarProyecto('ejercicios/Palindromo/index.html')">Palindrome</button></li>
+        <li><button onclick="cargarProyecto('ejercicios/ppt/index.html')">Piedra, papel o tijera</button></li>
+        <li><button onclick="cargarProyecto('ejercicios/ppt2/index.html')">Piedra, papel o tijera 2</button></li>
+      </ul>
+    </aside>
+
+    <section class="visor-proyecto">
+      <iframe id="visor" src="" frameborder="0"></iframe>
+    </section>
+  </div>
+
+  <script>
+    function cargarProyecto(ruta) {
+      document.getElementById('visor').src = ruta;
+    }
+  </script>
+</body>
+</html>
