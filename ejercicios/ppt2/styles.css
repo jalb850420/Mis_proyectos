@@ -1,6 +1,16 @@
-
+/* 
 * {
     border: 1px solid red;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("img/FondoNew.png"); /* Ruta de tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh; /* Asegura que cubre toda la altura */
 }
 
 .fondo-juego {
@@ -9,14 +19,15 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    background-color: #fff; /* o algún color que combine con tu imagen */
+    background-color: #fff;
     height: 97vh;
     width: 90vw;
 }
 
 .div_header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     height: 100px;
 }
 
@@ -32,17 +43,17 @@
 
 .tabla-score {
   position: absolute; /* Posiciona la tabla en la parte superior derecha */
-  top: 20px; /* 20px desde la parte superior */
-  right: 20px; /* 20px desde la parte derecha */
+  top: 10px; /* 20px desde la parte superior */
+  right: 10px; /* 20px desde la parte derecha */
   background-image: url('img/score.png'); /* Imagen de fondo */
   background-size: contain; /* La imagen se ajusta dentro de la tabla sin recortarse */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   color: white;
-  padding: 10px;
+  padding: 10px; 
   border-radius: 8px;
-  width: 250px; /* Establece un tamaño fijo más pequeño para la tabla */
-  height: 150px; /* Establece una altura fija para la tabla */
+  width: 230px; /* Establece un tamaño fijo más pequeño para la tabla */
+  height: 130px; /* Establece una altura fija para la tabla */
   box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
   text-align: center;
   overflow: hidden; /* Asegura que si la imagen es más grande que el contenedor, no se desborde */
@@ -58,20 +69,29 @@ table {
 }
 
 th, td {
-  padding: 10px;
+  
   /* border: 1px solid #fff; Color del borde de la tabla */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Da contraste al texto */
 }
 
 th {
-  font-size: 20px;
+  padding: 5px;
+  vertical-align: bottom;
+  height: 35px;
+  font-size: 12px;
 }
 
 td {
-  font-size: 18px;
+  vertical-align: top;
+  font-size: 40px;
 }
 
 /* Estilo para las imágenes */
+.imagenes {
+  display: flex;
+  align-items: center;
+}
+
 .img_img1 {
     width: 200px;
     height: 70px;
@@ -82,12 +102,25 @@ td {
     height: 100px;
 }
 
+.img_img3 {
+    width: 180px;
+    height: 140px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  gap: 10px;
+}
+
 /* Diseño responsivo para dispositivos pequeños */
 @media (max-width: 768px) {
   /* .contenedor-juego {
-    grid-template-columns: 1fr; /* En dispositivos más pequeños, todo se muestra en una sola columna */
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-  } */
+  }  */
 
   .imagenes {
     grid-template-columns: 1fr; /* Imágenes en una sola columna */
