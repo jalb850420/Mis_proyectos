@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+body{
+  background-color: #101218;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.img_section{
+  width: 300px;
+  height: 130px; 
+  /* border-radius: 50%; */
+}
+header{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  height: 60px;
+}
+
+.img_header {
+  /* padding: 10px 12px; */
+  /* margin: 12px 16px 12px 10px; */
+  /* display: flex; */
+  /* align-items: center; */
+}
+
+header div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.but_header{
+  background: #c2e7ff;
+  color: #001d35;
+  border-radius: 20px;
+  width: 80px;
+  height: 40px;
+  padding: 10px 12px;
+  margin: 12px 16px 12px 10px;
+  min-width: 85px;
+}
+
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+section{
+  display: block;
+  justify-content: center;
+  gap: 60px;
+  padding: 100;
+}
+section div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div_button{
+  padding: 20px;
+  gap: 10px;
+}
+button{
+  width: 150px;
+  height: 35px;
+  background-color: #3f4454;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.div_input{
+  background-color: #3f424a;
+  width: 45%;    
+  margin: 0 auto; 
+  border-radius: 40px;
+  padding: 5px;
+  cursor: text; 
+}
+
+.div_input img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.img_lupa{
+  cursor: default;
+}
+
+input{
+  background-color: #3f424a;
+  color: white;
+  width: 450px;
+  border: none;
+}
+
+input:focus{
+  border: none;
+  outline: none;
+}
+.Text_div_body{
+  color: white;
+}
+.Text_div_body a {
+  color: #d19efa;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  gap: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  gap: 40px;
+  padding: 10px;
+}
+.div-footer {
+  background-color: #242832;
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+  color: white;
+  gap: 20px;
+  height: 20px;
+  padding: 15px 30px;
+  border-top: 1px solid gray;
+}
+
+.div2_footter {
+  
+}
+/* .footer_disp{
+  display: flex;
+  align-items: flex-end;
+} */
+/* .cont_header {
+  display: flex;
+  justify-content: flex-end;
+} */
