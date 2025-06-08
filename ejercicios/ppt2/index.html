@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- <img src="img/FCA.png" alt="">
-    <img src="img/titulo.png" alt="">
-    <img src="img/score.png" alt="">
-    <img src="img/reglas.png" alt=""> -->
 
+<body>
     <header>
         <div class="div_header">
             <div class="imagenes">
                 <img src="img/titulo.png" class="img_img2" alt="Imagen 2" />
                 <img src="img/FCA.png" class="img_img1" alt="Imagen 1" />
             </div>
-            
+
             <div class="contenedor-juego">
                 <!-- Tabla para el Score -->
                 <div class="tabla-score">
@@ -36,61 +33,112 @@
             </div>
         </div>
     </header>
-
-<section>
-    <table>
-        <tr>
-            <th>
-                1
-            </th>
-            <th>
-                2
-            </th>
-            <th>
-                3
-            </th>
-            <th>
-                4
-            </th>
-        </tr>
-        <tr>
-            <td>
-                5
-            </td>
-            <td>
-                6
-            </td>
-            <td>
-                7
-            </td>
-            <td>
-                8
-            </td>
-        </tr>
-        <tr>
-            <td>
-                9
-            </td>
-            <td>
-                10
-            </td>
-            <td>    
-                11
-            </td>
-            <td>
-                12
-            </td>
-
-        </tr>
-    </table>
-</section>
-
-<footer>
-    <div>
-        <img src="img/reglas.png" class="img_img3" alt="Imagen 2" />
+    <div id="pantalla-inicial" style="text-align: center; margin-top: 40px;">
+        <button id="btn-iniciar" class="boton-juego">Iniciar juego</button>
     </div>
-</footer>
+    <section>
+        <table>
+            <tr>
+                <th id="sel1_jug1" class="sel1_jug1">
+                    <div id="div_titulo1" class="titulo-jugador oculto">
+                        Jugador 1
+                    </div>
+                </th>
+                <th>
+                    <!-- 2 -->
+                    <div id="div_resultado1" class="titulo-jugador oculto">
+                        Jugador 1
+                    </div>
+                </th>
+                <th>
+                    <!-- 3 -->
+                    <div id="div_resultado2" class="titulo-jugador oculto">
+                        Jugador 2
+                    </div>
+                </th>
+                <th id="sel1_jug2" class="sel1_jug2">
+                    <div id="div_titulo2" class="titulo-jugador oculto">
+                        Jugador 2
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td id="sel2_jug1" class="sel2_jug1">
+                    <!-- 5 -->
+                    <div id="selector1" class="selector">
+                        <img src="img/Piedraizq.png" alt="Piedra" data-valor="Piedra" class="visible" />
+                        <img src="img/Papelizq.png" alt="Papel" data-valor="Papel" />
+                        <img src="img/tijeraizq.png" alt="Tijera" data-valor="Tijera" />
+                    </div>
+                </td>
+                <td>
+                    <!-- 6 -->
+                    <div id="resultado1" class="selector">
+                        <img src="img/Piedraizq.png" alt="Piedra" data-valor="Piedra" class="visible" />
+                        <img src="img/Papelizq.png" alt="Papel" data-valor="Papel" />
+                        <img src="img/tijeraizq.png" alt="Tijera" data-valor="Tijera" />
+                    </div>
+                </td>
+                <td>
+                    <!-- 7 -->
+                    <div id="resultado2" class="selector">
+                        <img src="img/Piedraderecha.png" alt="Piedra" data-valor="Piedra" class="visible" />
+                        <img src="img/Papelderecha.png" alt="Papel" data-valor="Papel" />
+                        <img src="img/tijeraderecha.png" alt="Tijera" data-valor="Tijera" />
+                    </div>
+                </td>
+                <td id="sel2_jug2" class="sel2_jug2">
+                    <!-- 8 -->
+                    <div id="selector2" class="selector">
+                        <img src="img/Piedraderecha.png" alt="Piedra" data-valor="Piedra" class="visible" />
+                        <img src="img/Papelderecha.png" alt="Papel" data-valor="Papel" />
+                        <img src="img/tijeraderecha.png" alt="Tijera" data-valor="Tijera" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="sel2_jug1" class="sel_jug1">
+                    <!-- 9 -->
+                </td>
+                <td id="celda10">
+                    <div id="estado-jugador1" class="estado-resultado oculto">
+                        <img id="img-ganador-j1" src="img/ganador.png" alt="Ganador" class="oculto" />
+                        <img id="img-perdedor-j1" src="img/perdedor.png" alt="Perdedor" class="oculto" />
+                    </div>
+                </td>
+                <td id="celda11">
+                    <div id="estado-jugador2" class="estado-resultado oculto">
+                        <img id="img-ganador-j2" src="img/ganador.png" alt="Ganador" class="oculto" />
+                        <img id="img-perdedor-j2" src="img/perdedor.png" alt="Perdedor" class="oculto" />
+                    </div>
+                </td>
+                <td id="celda-empate" colspan="2" class="oculto">
+                    <img id="img-empate" src="img/empate.png" alt="Empate" />
+                </td>
+                <td id="sel3_jug2" class="sel3_jug2">
+                    <!-- 12 -->
+                </td>
+            </tr>
+            <tr>
+                <td id="scoreboard" colspan="4">
+                    <div id="mensaje-juego" class="mensaje-juego" style="color: white; font-size: 20px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center; padding-top: 15px;">
+                    <button id="btn-siguiente" class="boton-juego oculto">Siguiente ronda</button>
+                    <button id="btn-terminar" class="boton-juego oculto">Terminar juego</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <div>
+            <img src="img/reglas.png" class="img_img3" alt="Imagen 2" />
+        </div>
+    </footer>
 
-    
+    <script src="script.js"></script>
 </body>
+
 </html>
