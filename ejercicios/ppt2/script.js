@@ -40,7 +40,7 @@ function ocultarEstados() {
 btnIniciar.addEventListener('click', () => {
   // Ocultamos la pantalla inicial
   pantallaInicial.classList.add('oculto');
-  alert("Indicaciones: Coloca el mouse sobre la imagen para iniciar la rotación y haz clic cuando aparezca la opción que deseas elegir.")
+  alert("Indicaciones: Posiciona el mouse (en PC) o toca la pantalla (en móvil) sobre la imagen para iniciar la rotación. Cuando aparezca la opción que deseas, haz clic o toca nuevamente para seleccionarla.");
   // Iniciamos el turno del Jugador 1
   mostrarMensaje("Truno para el jugador 1")
   mostrarSelector1();
@@ -403,3 +403,48 @@ function mostrarGanador(jugador) {
         imagenGanador.classList.remove('ganador');
     }, 3000);
 }
+
+function configurarCarrusel(idSelector) {
+    const selector = document.getElementById(idSelector);
+    const imagenes = selector.querySelectorAll("img");
+    let indice = 0;
+    let intervalo;
+    let eleccionFijada = false;
+
+    function rotarImagen() {
+        imagenes.forEach(img => img.classList.remove("visible"));
+        imagenes[indice].classList.add("visible");
+        indice = (indice + 1) % imagenes.length;
+    }
+
+    function activarCarrusel() {
+        if (!eleccionFijada) {
+            intervalo = setInterval(rotarImagen, 700); // Rotar imágenes cada 700ms
+        }
+    }
+
+    function detenerCarrusel() {
+        if (!eleccionFijada) {
+            clearInterval(intervalo);
+        }
+    }
+
+    function fijarEleccion() {
+        clearInterval(intervalo);
+        eleccionFijada = true;
+        console.log(`Elección fijada: ${imagenes[indice].alt}`);
+    }
+
+    // PC: Mouse activa y clic fija la elección
+    selector.addEventListener("mouseover", activarCarrusel);
+    selector.addEventListener("mouseout", detenerCarrusel);
+    selector.addEventListener("click", fijarEleccion);
+
+    // Móvil: Toque activa y `touchend` fija la elección
+    selector.addEventListener("touchstart", activarCarrusel);
+    selector.addEventListener("touchend", fijarEleccion);
+}
+
+// Configurar carruseles para ambos jugadores
+configurarCarrusel("selector1"); // Jugador 1
+configurarCarrusel("selector2"); // Jugador 2
