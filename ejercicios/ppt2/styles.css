@@ -366,11 +366,13 @@ footer{
 
     /* Centrar y reducir los textos "Jugador 1" y "Jugador 2" */
     th {
-        font-size: 11px; /* Texto más pequeño */
-        text-align: center;
-        vertical-align: bottom;
-        position: relative;
-        top: -2px; /* Ajuste adicional */
+      font-size: 11px; 
+      text-align: center;
+      vertical-align: middle; 
+      display: table-cell; 
+      padding-top: 3px; 
+      position: relative;
+      top: 2px; 
     }
 }
 
