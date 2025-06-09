@@ -330,3 +330,48 @@ footer{
     }
 }
 
+
+/* Diseño optimizado para celulares */
+@media (max-width: 600px) { /* Reducimos el punto de quiebre a 600px para enfocarnos en celulares */
+    .imagenes img {
+        width: 30%; /* Reducimos el tamaño al 80% */
+        height: auto; /* Mantiene proporción */
+        display: block; /* Asegura alineación correcta */
+        margin: 0 ; /* Centra las imágenes */
+    }
+    .tabla-score {
+        width: 140px; /* Menos ancho */
+        height: 80px; /* Menos alto */
+        padding: 4px;
+        font-size: 10px; /* Texto más compacto */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    table {
+        font-size: 10px; /* Texto más pequeño */
+    }
+
+    th, td {
+        padding: 4px;
+    }
+
+    /* Ajustar tamaño y posición del score */
+    #score1, #score2 {
+        font-size: 22px; /* Reducimos más el tamaño */
+        position: relative;
+        top: -9px; /* Ajuste para centrarlo mejor */
+    }
+
+    /* Centrar y reducir los textos "Jugador 1" y "Jugador 2" */
+    th {
+        font-size: 11px; /* Texto más pequeño */
+        text-align: center;
+        vertical-align: bottom;
+        position: relative;
+        top: -2px; /* Ajuste adicional */
+    }
+}
+
+
