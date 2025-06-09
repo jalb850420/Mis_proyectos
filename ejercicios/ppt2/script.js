@@ -42,7 +42,7 @@ btnIniciar.addEventListener('click', () => {
   pantallaInicial.classList.add('oculto');
   alert("Indicaciones: Posiciona el mouse (en PC) o toca la pantalla (en móvil) sobre la imagen para iniciar la rotación. Cuando aparezca la opción que deseas, haz clic o toca nuevamente para seleccionarla.");
   // Iniciamos el turno del Jugador 1
-  mostrarMensaje("Truno para el jugador 1")
+  mostrarMensaje("Turno para el jugador 1")
   mostrarSelector1();
 });
 
@@ -111,7 +111,7 @@ document.querySelectorAll('#selector1 img').forEach(img => {
     img.classList.add('visible');
 
     // Ocultar selector1 y mostrar selector2
-    mostrarMensaje("Truno para el jugador 2")
+    mostrarMensaje("Turno para el jugador 2")
     mostrarSelector2();
   });
 });

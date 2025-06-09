@@ -259,27 +259,74 @@ footer{
 
 
 /* Diseño responsivo para dispositivos pequeños */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
   /* .contenedor-juego {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }  */
-
+/* 
   .imagenes {
     grid-template-columns: 1fr; /* Imágenes en una sola columna */
-  }
+  /* } */
 
-  .tabla-score {
+  /* .tabla-score {
     padding: 0.5rem;
     font-size: 14px; /* Reducir el tamaño del texto en la tabla en pantallas pequeñas */
-  }
+  /* } */ 
      
-   table {
+   /* table {
     font-size: 14px; /* Reducir el tamaño de la tabla */
-  }  */
+  /* }    */
 
-
+/* 
   th, td {
     padding: 8px;
   }
+} */ 
+
+/* Diseño responsivo para dispositivos pequeños */
+@media (max-width: 768px) {
+    .imagenes {
+        grid-template-columns: 1fr; /* Imágenes en una sola columna */
+    }
+
+    .tabla-score {
+        width: 180px; /* Reduce el ancho */
+        height: 100px; /* Reduce la altura */
+        padding: 5px;
+        font-size: 12px;
+        display: flex; /* Mantener centrado */
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+    }
+     
+    table {
+        font-size: 12px; /* Texto más compacto */
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    /* Ajustar la posición del score */
+    #score1, #score2 {
+        font-size: 30px; /* Texto más pequeño en móviles */
+        position: relative;
+        top: -12px; /* Elevarlo un poco más */
+    }
+
+    /* Centrar los textos de Jugador 1 y Jugador 2 */
+        th {
+        font-size: 14px; /* Reducir tamaño en móviles */
+        vertical-align: bottom; /* Asegura alineación dentro de la tabla */
+        position: relative;
+        top: -5px; /* Subir un poco más para ajustarlo */
+    }
+    .thjig1 {
+        text-align: right; 
+    }
+    .thjig2 {
+        text-align: left; 
+    }
 }
+
