@@ -407,42 +407,38 @@ function mostrarGanador(jugador) {
 function configurarCarrusel(idSelector) {
     const selector = document.getElementById(idSelector);
     const imagenes = selector.querySelectorAll("img");
-    let indice = 0;
+    let currentIndex = 0;
     let intervalo;
     let eleccionFijada = false;
+    let esMovil = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent); // Detecta si es móvil
 
-    function rotarImagen() {
+    function mostrarImagen(index) {
         imagenes.forEach(img => img.classList.remove("visible"));
-        imagenes[indice].classList.add("visible");
-        indice = (indice + 1) % imagenes.length;
+        imagenes[index].classList.add("visible");
     }
 
     function activarCarrusel() {
         if (!eleccionFijada) {
-            intervalo = setInterval(rotarImagen, 1600); // Rotar imágenes cada 700ms
-        }
-    }
-
-    function detenerCarrusel() {
-        if (!eleccionFijada) {
-            clearInterval(intervalo);
+            intervalo = setInterval(() => {
+                currentIndex = (currentIndex + 1) % imagenes.length;
+                mostrarImagen(currentIndex);
+            }, esMovil ? 1600 : 1200); // Velocidad ajustada para móviles y PC
         }
     }
 
     function fijarEleccion() {
         clearInterval(intervalo);
         eleccionFijada = true;
-        console.log(`Elección fijada: ${imagenes[indice].alt}`);
+        console.log(`Elección fijada: ${imagenes[currentIndex].alt}`);
     }
 
-    // PC: Mouse activa y clic fija la elección
-    selector.addEventListener("mouseover", activarCarrusel);
-    selector.addEventListener("mouseout", detenerCarrusel);
-    selector.addEventListener("click", fijarEleccion);
-
-    // Móvil: Toque activa y `touchend` fija la elección
-    selector.addEventListener("touchstart", activarCarrusel);
-    selector.addEventListener("touchend", fijarEleccion);
+    if (esMovil) {
+        selector.addEventListener("touchstart", activarCarrusel);
+        selector.addEventListener("touchend", fijarEleccion);
+    } else {
+        selector.addEventListener("mouseenter", activarCarrusel); // Solo en PC
+        selector.addEventListener("click", fijarEleccion);
+    }
 }
 
 // Configurar carruseles para ambos jugadores
