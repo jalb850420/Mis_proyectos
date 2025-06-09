@@ -419,7 +419,7 @@ function configurarCarrusel(idSelector) {
 
     function activarCarrusel() {
         if (!eleccionFijada) {
-            intervalo = setInterval(rotarImagen, 700); // Rotar imágenes cada 700ms
+            intervalo = setInterval(rotarImagen, 1600); // Rotar imágenes cada 700ms
         }
     }
 
